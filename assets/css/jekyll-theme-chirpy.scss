@@ -1,0 +1,15 @@
+---
+---
+
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+body {
+  background-image: url('/assets/图标/preview.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
