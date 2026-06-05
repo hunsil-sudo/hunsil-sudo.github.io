@@ -77,10 +77,9 @@ analytics:
 
 # Page views settings
 
-id: hunsil
-pageviews:
-  provider: goatcounter
-  url: https://hunsil.goatcounter.com
+analytics:
+  goatcounter:
+    id: hunsil
 
 # Prefer color scheme setting.
 #
