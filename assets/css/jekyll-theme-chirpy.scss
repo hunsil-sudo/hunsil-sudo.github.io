@@ -1,3 +1,22 @@
+---
+---
+
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+body {
+  background-image: url('/assets/img/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+
+
 body {
   background:
     linear-gradient(
