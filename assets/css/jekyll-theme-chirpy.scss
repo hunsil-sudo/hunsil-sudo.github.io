@@ -7,14 +7,6 @@
 {%- endif -%}
 ';
 
-body {
-  background-image: url('/assets/img/bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-
 
 
 body {
@@ -61,4 +53,164 @@ pre {
   background: rgba(7, 11, 22, 0.65) !important;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+}
+
+
+
+#footer,
+.footer,
+.footer-wrapper {
+  background: rgba(10, 16, 30, 0.14) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 0.85rem;
+}
+
+#footer a,
+.footer a,
+.footer-wrapper a {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+#footer:hover,
+.footer:hover,
+.footer-wrapper:hover {
+  background: rgba(10, 16, 30, 0.28) !important;
+}
+
+
+
+/* ===== Readability Patch ===== */
+
+/* 全站基础文字 */
+body {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+/* 左侧栏：加深一点，文字更亮 */
+#sidebar {
+  background: rgba(8, 12, 24, 0.68) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+#sidebar .site-title,
+#sidebar .site-title a,
+#sidebar .site-subtitle,
+#sidebar .nav-link,
+#sidebar .sidebar-bottom a,
+#sidebar .sidebar-bottom i {
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+#sidebar .site-subtitle {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+/* 顶部栏 */
+#topbar-wrapper {
+  background: rgba(10, 16, 30, 0.36) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* 正文卡片/文章区域：减少“透过头” */
+#post-list .card,
+article,
+.page,
+#main-wrapper .content,
+#tail-wrapper,
+#search-results > article {
+  background: rgba(12, 18, 32, 0.58) !important;
+  color: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* 标题和正文 */
+h1, h2, h3, h4, h5, h6,
+.post-title,
+.card-title,
+#main-wrapper p,
+#main-wrapper li,
+#main-wrapper td,
+#main-wrapper th,
+.post-content,
+.content {
+  color: rgba(255, 255, 255, 0.96) !important;
+}
+
+/* 链接 */
+#main-wrapper a,
+.post-content a {
+  color: #9fd4ff !important;
+}
+
+/* 表格：单独加深，不然最容易看不清 */
+table {
+  background: rgba(8, 12, 24, 0.38) !important;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background: rgba(10, 16, 30, 0.78) !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+}
+
+td {
+  background: rgba(12, 18, 32, 0.48) !important;
+  color: rgba(255, 255, 255, 0.94) !important;
+}
+
+/* 代码块 */
+pre,
+.highlight,
+code.highlighter-rouge {
+  background: rgba(7, 11, 22, 0.82) !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* 行内 code */
+code {
+  color: #ffdca8;
+}
+
+/* 引用块 */
+blockquote {
+  background: rgba(12, 18, 32, 0.46) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  border-left: 4px solid rgba(159, 212, 255, 0.55) !important;
+}
+
+/* 搜索框、输入框 */
+input,
+textarea,
+.search {
+  background: rgba(255, 255, 255, 0.92) !important;
+  color: #111827 !important;
+}
+
+/* 底部版权栏：弱化 */
+#footer,
+footer,
+#tail-wrapper footer {
+  background: rgba(10, 16, 30, 0.16) !important;
+  color: rgba(255, 255, 255, 0.58) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 0.85rem;
+  box-shadow: none !important;
+}
+
+#footer a,
+footer a,
+#tail-wrapper footer a {
+  color: rgba(255, 255, 255, 0.72) !important;
 }
