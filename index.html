@@ -1,4 +1,57 @@
 ---
 layout: home
-# Index page
 ---
+
+<div id="homepage-site-stats" class="homepage-site-stats" hidden>
+  <h2 class="stats-title">站点统计</h2>
+
+  <div class="stats-grid">
+    <div class="stats-card">
+      <div class="stats-label">首页访问量</div>
+      <div class="stats-value" id="homepage-view-count">--</div>
+    </div>
+
+    <div class="stats-card">
+      <div class="stats-label">文章总数</div>
+      <div class="stats-value">{{ site.posts | size }}</div>
+    </div>
+
+    <div class="stats-card">
+      <div class="stats-label">标签数</div>
+      <div class="stats-value">{{ site.tags | size }}</div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', async function () {
+  const isHome = location.pathname === '/' || location.pathname === '/index.html';
+  const panel = document.getElementById('homepage-site-stats');
+
+  if (!isHome || !panel) return;
+
+  const postList = document.getElementById('post-list');
+  const mainContent = document.querySelector('#main-wrapper .content');
+
+  if (postList && postList.parentNode) {
+    postList.parentNode.insertBefore(panel, postList.nextSibling);
+  } else if (mainContent) {
+    mainContent.appendChild(panel);
+  }
+
+  panel.hidden = false;
+
+  const countEl = document.getElementById('homepage-view-count');
+
+  try {
+    const goatId = 'hunsil';
+    const api = `https://${goatId}.goatcounter.com/counter/${encodeURIComponent('/')}.json`;
+    const res = await fetch(api);
+    const data = await res.json();
+
+    countEl.textContent = data.count ?? data.visits ?? '--';
+  } catch (err) {
+    countEl.textContent = '--';
+  }
+});
+</script>
