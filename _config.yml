@@ -76,8 +76,11 @@ analytics:
     id: # fill in your Fathom Site ID
 
 # Page views settings
+analytics:
+  goatcounter:
+    id: hunsil
 pageviews:
-  provider: # now only supports 'goatcounter'
+  provider: goatcounter
 
 # Prefer color scheme setting.
 #
