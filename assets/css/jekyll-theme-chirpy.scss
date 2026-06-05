@@ -1,15 +1,45 @@
----
----
-
-@use 'main
-{%- if jekyll.environment == 'production' -%}
-  .bundle
-{%- endif -%}
-';
-
 body {
-  background-image: url('/assets/图标/preview.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(6, 10, 20, 0.32) 0%,
+      rgba(8, 14, 28, 0.40) 100%
+    ),
+    url('/assets/图标/preview.jpg') center center / cover fixed no-repeat;
+}
+
+#sidebar {
+  background: rgba(8, 12, 24, 0.42) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+#topbar-wrapper {
+  background: rgba(10, 16, 30, 0.30) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#main-wrapper .content,
+#post-list .card,
+article,
+.card,
+.page {
+  background: rgba(15, 23, 42, 0.22);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 16px;
+}
+
+.post-content,
+.content {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.highlight,
+pre {
+  background: rgba(7, 11, 22, 0.65) !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
