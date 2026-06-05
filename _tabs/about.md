@@ -1,13 +1,26 @@
 ---
+---
+
+# 👋 你好，我是 hunsil
+
+> 一名专注于 Web 安全与 CTF 的网络空间安全学习者
 
 ---
 
-### 你好 👋
-我是一名菜菜Web手
+### 🎯 核心方向
+| 领域 | 技能 |
+|------|------|
+| **Web 安全** | SQL注入 / XSS / 文件上传 / Java反序列化 / 模板注入 |
+| **内网渗透** | 端口转发 / 隧道技术 / 横向移动 / 权限维持 / 域渗透 |
+| **CTF 竞赛** | Web 方向解题 / 漏洞挖掘 / Payload 构造 / WAF 绕过 |
 
-### 📚 学习与记录
-- 这里是我的**个人学习笔记博客**，主要记录 CTF 刷题、漏洞分析、实战演练与技术踩坑
-- 内容偏向**实战化与可复现**，尽量用清晰的步骤与代码示例还原攻击链路
+### 📝 博客理念
+- 记录**实战化**的安全技术与踩坑经验
+- 用清晰的步骤与代码示例，还原完整攻击链路
+- 分享从基础到进阶的网安学习路径
 
-- 🔗 GitHub: [hunsil-sudo](https://github.com/hunsil-sudo)
-- 📧 Email: z20070227z@qq.com
+### 📮 找到我
+- **GitHub**: [hunsil-sudo](https://github.com/hunsil-sudo)
+- **Email**: [z20070227z@qq.com](mailto:z20070227z@qq.com)
+- **博客**: [https://hunsil-sudo.github.io](https://hunsil-sudo.github.io)
+
