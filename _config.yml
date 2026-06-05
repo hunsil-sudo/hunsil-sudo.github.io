@@ -76,11 +76,11 @@ analytics:
     id: # fill in your Fathom Site ID
 
 # Page views settings
-analytics:
-  goatcounter:
-    id: hunsil
+
+id: hunsil
 pageviews:
   provider: goatcounter
+  url: https://hunsil.goatcounter.com/count
 
 # Prefer color scheme setting.
 #
