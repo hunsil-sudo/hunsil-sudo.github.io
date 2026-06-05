@@ -1,4 +1,6 @@
 ---
+icon: fas fa-info-circle
+order: 4
 ---
 
 <div style="text-align: center; margin-bottom: 2rem;">
