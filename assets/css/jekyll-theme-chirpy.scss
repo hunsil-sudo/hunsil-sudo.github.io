@@ -214,3 +214,58 @@ footer a,
 #tail-wrapper footer a {
   color: rgba(255, 255, 255, 0.72) !important;
 }
+
+
+
+/* ===== Homepage Site Stats ===== */
+
+.homepage-site-stats {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem 1.25rem 1.4rem;
+  background: rgba(12, 18, 32, 0.52);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.homepage-site-stats .stats-title {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.homepage-site-stats .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.homepage-site-stats .stats-card {
+  padding: 1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.homepage-site-stats .stats-label {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 0.45rem;
+}
+
+.homepage-site-stats .stats-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+@media (max-width: 768px) {
+  .homepage-site-stats .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
