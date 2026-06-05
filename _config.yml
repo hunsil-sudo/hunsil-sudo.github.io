@@ -63,7 +63,7 @@ analytics:
   google:
     id: # fill in your Google Analytics ID
   goatcounter:
-    id: # fill in your GoatCounter ID
+    id: hunsil
   umami:
     id: # fill in your Umami ID
     domain: # fill in your Umami domain
@@ -77,9 +77,8 @@ analytics:
 
 # Page views settings
 
-analytics:
-  goatcounter:
-    id: hunsil
+pageviews:
+  provider: goatcounter   
 
 # Prefer color scheme setting.
 #
