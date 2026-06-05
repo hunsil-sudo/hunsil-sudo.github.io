@@ -1,0 +1,63 @@
+{% assign goat_id = site.analytics.goatcounter.id %}
+
+{% if goat_id %}
+  <span class="me-1">
+    <i class="far fa-eye fa-fw"></i>
+    <span id="goatcounter-pageviews">--</span>
+    次浏览
+  </span>
+
+  <script>
+    (() => {
+      const el = document.getElementById('goatcounter-pageviews');
+      if (!el) return;
+
+      const goatId = {{ goat_id | jsonify }};
+
+      const normalize = (path) => {
+        if (!path) return '/';
+        return path !== '/' && path.endsWith('/') ? path.slice(0, -1) : path;
+      };
+
+      const rawPath = window.location.pathname || '/';
+      const decodedPath = decodeURI(rawPath);
+
+      const candidates = [
+        rawPath,
+        normalize(rawPath),
+        decodedPath,
+        normalize(decodedPath),
+        rawPath + (rawPath.endsWith('/') ? '' : '/'),
+        normalize(rawPath) + '/',
+        encodeURI(decodedPath),
+        encodeURI(normalize(decodedPath)),
+        encodeURI(decodedPath) + (encodeURI(decodedPath).endsWith('/') ? '' : '/')
+      ];
+
+      const uniqueCandidates = [...new Set(candidates.filter(Boolean))];
+
+      async function getCount(path) {
+        const url = `https://${goatId}.goatcounter.com/counter/${encodeURIComponent(path)}.json`;
+        const res = await fetch(url, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      }
+
+      (async () => {
+        for (const path of uniqueCandidates) {
+          try {
+            const data = await getCount(path);
+            const count = data.count ?? data.visits;
+
+            if (typeof count === 'number') {
+              el.textContent = count;
+              return;
+            }
+          } catch (e) {}
+        }
+
+        el.textContent = '--';
+      })();
+    })();
+  </script>
+{% endif %}
