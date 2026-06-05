@@ -19,22 +19,7 @@
         return path !== '/' && path.endsWith('/') ? path.slice(0, -1) : path;
       };
 
-      const rawPath = window.location.pathname || '/';
-      const decodedPath = decodeURI(rawPath);
-
-      const candidates = [
-        rawPath,
-        normalize(rawPath),
-        decodedPath,
-        normalize(decodedPath),
-        rawPath + (rawPath.endsWith('/') ? '' : '/'),
-        normalize(rawPath) + '/',
-        encodeURI(decodedPath),
-        encodeURI(normalize(decodedPath)),
-        encodeURI(decodedPath) + (encodeURI(decodedPath).endsWith('/') ? '' : '/')
-      ];
-
-      const uniqueCandidates = [...new Set(candidates.filter(Boolean))];
+      const path = normalize(window.location.pathname || '/');
 
       async function getCount(path) {
         const url = `https://${goatId}.goatcounter.com/counter/${encodeURIComponent(path)}.json`;
@@ -44,19 +29,13 @@
       }
 
       (async () => {
-        for (const path of uniqueCandidates) {
-          try {
-            const data = await getCount(path);
-            const count = data.count ?? data.visits;
-
-            if (typeof count === 'number') {
-              el.textContent = count;
-              return;
-            }
-          } catch (e) {}
+        try {
+          const data = await getCount(path);
+          const count = data.count ?? data.visits;
+          el.textContent = typeof count === 'number' ? count : '--';
+        } catch (e) {
+          el.textContent = '--';
         }
-
-        el.textContent = '--';
       })();
     })();
   </script>
