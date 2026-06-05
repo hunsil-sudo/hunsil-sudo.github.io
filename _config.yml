@@ -80,7 +80,7 @@ analytics:
 id: hunsil
 pageviews:
   provider: goatcounter
-  url: https://hunsil.goatcounter.com/count
+  url: https://hunsil.goatcounter.com
 
 # Prefer color scheme setting.
 #
