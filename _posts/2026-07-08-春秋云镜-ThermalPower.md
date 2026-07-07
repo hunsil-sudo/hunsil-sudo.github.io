@@ -402,5 +402,5 @@ flag{63cd8cd5-151f-4f29-bdc7-f80312888158}
 
 [春秋云境-ThermalPower](https://nekosec.github.io/2025/02/15/春秋云境-ThermalPower/)
 
-[ThermalPower - 春秋云境 | h0ny's blog](https://h0ny.github.io/posts/ThermalPower-春秋云境/)
+[[ThermalPower - 春秋云境 | h0ny's blog](https://h0ny.github.io/posts/ThermalPower-春秋云境/)](https://h0ny.github.io/posts/ThermalPower-%E6%98%A5%E7%A7%8B%E4%BA%91%E5%A2%83/)
 
